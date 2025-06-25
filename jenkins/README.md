@@ -29,17 +29,18 @@ Jenkins is an **open-source automation server** that helps automate the parts of
 1. **[Job Types](./job_types.md)**
    - Learn about different Jenkins job types (Freestyle, Pipeline, Multibranch, etc.)
    - Understand when to use each job type
-   - See examples and best practices
 
 2. **[Cron Load Spreading](./cron_load_spreading.md)**
    - Understand Jenkins' special `H` (hash) syntax for cron scheduling
    - Learn how to prevent the "thundering herd" problem
-   - Best practices for scheduling periodic jobs
 
 3. **[Spawning Long-Running Processes](./spawning_long_running_processes.md)**
    - How to start processes that survive after Jenkins build completion
    - Using `BUILD_ID=dontKillMe` for background processes
-   - Managing long-running services started by Jenkins
+
+4. **[Gmail SMTP Configuration](./gmail_smtp_configuration.md)**
+   - Step-by-step guide to configure Gmail SMTP in Jenkins
+   - Creating Google App Passwords for authentication
 
 ## Getting Started with Jenkins
 
