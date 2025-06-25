@@ -1,6 +1,6 @@
 # Jenkins Training Materials
 
-![Jenkins Logo](./images/jenkins.png)
+![Jenkins Logo](./images/jenkins.jpg)
 
 ## What is Jenkins?
 
