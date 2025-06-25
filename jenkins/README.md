@@ -1,6 +1,8 @@
 # Jenkins Training Materials
 
-![Jenkins Logo](./images/jenkins.jpg)
+<div align="center">
+  <img src="./images/jenkins.jpg" alt="Jenkins Logo" width="400" />
+</div>
 
 ## What is Jenkins?
 

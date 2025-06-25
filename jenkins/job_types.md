@@ -1,6 +1,8 @@
 # Jenkins Job Types
 
-![Jenkins Job Types](./images/job_types.png)
+<div align="center">
+  <img src="./images/job_types.png" alt="Jenkins Job Types" width="600" />
+</div>
 
 Jenkins provides several types of jobs to suit different project needs. Each job type has its own strengths and use cases.
 
