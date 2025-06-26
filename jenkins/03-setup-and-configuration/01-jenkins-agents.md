@@ -8,6 +8,10 @@ Jenkins uses a master-agent architecture where:
 - **Master**: Manages the Jenkins UI, job configurations, and schedules builds
 - **Agents**: Execute the actual build jobs
 
+<div align="center">
+  <img src="../images/jenkins-agents/architecture.png" alt="Jenkins Master-Agent Architecture" width="800" />
+</div>
+
 ### Benefits of Using Agents
 - **Scalability**: Distribute load across multiple machines
 - **Platform diversity**: Run builds on different OS (Windows, Linux, macOS)
