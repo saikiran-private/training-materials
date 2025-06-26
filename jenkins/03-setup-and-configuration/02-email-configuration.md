@@ -21,7 +21,7 @@ Go to [https://myaccount.google.com/](https://myaccount.google.com/) and sign in
 In the search bar, type "App passwords" to quickly find the setting.
 
 <div align="center">
-  <img src="./images/gmail-setup/app_passwords_search.png" alt="Search for App Passwords" width="700" />
+  <img src="../images/gmail-setup/app_passwords_search.png" alt="Search for App Passwords" width="700" />
 </div>
 
 ### 1.3 Create New App Password
@@ -29,7 +29,7 @@ In the search bar, type "App passwords" to quickly find the setting.
 Click on "App passwords" and then create a new app password for Jenkins.
 
 <div align="center">
-  <img src="./images/gmail-setup/create_app_passwords.png" alt="Create App Password" width="600" />
+  <img src="../images/gmail-setup/create_app_passwords.png" alt="Create App Password" width="600" />
 </div>
 
 **Important Notes:**
@@ -41,7 +41,7 @@ Click on "App passwords" and then create a new app password for Jenkins.
 Google will generate a 16-character password. **Copy this password immediately** as you won't be able to see it again.
 
 <div align="center">
-  <img src="./images/gmail-setup/generated_app_password.png" alt="Generated App Password" width="600" />
+  <img src="../images/gmail-setup/generated_app_password.png" alt="Generated App Password" width="600" />
 </div>
 
 ⚠️ **Security Tip**: Store this password securely. Treat it like your main Google password.
@@ -53,7 +53,7 @@ Google will generate a 16-character password. **Copy this password immediately**
 Navigate to **Manage Jenkins** → **System**
 
 <div align="center">
-  <img src="./images/gmail-setup/manage_jenkins_system.png" alt="Manage Jenkins System" width="700" />
+  <img src="../images/gmail-setup/manage_jenkins_system.png" alt="Manage Jenkins System" width="700" />
 </div>
 
 ### 2.2 Configure System Admin Email
@@ -61,7 +61,7 @@ Navigate to **Manage Jenkins** → **System**
 Scroll down to the **Jenkins Location** section and set the System Admin e-mail address. This should be the same Gmail address you're using for SMTP.
 
 <div align="center">
-  <img src="./images/gmail-setup/system_admin_email.png" alt="System Admin Email Configuration" width="700" />
+  <img src="../images/gmail-setup/system_admin_email.png" alt="System Admin Email Configuration" width="700" />
 </div>
 
 ### 2.3 Configure E-mail Notification
@@ -69,7 +69,7 @@ Scroll down to the **Jenkins Location** section and set the System Admin e-mail 
 Scroll down to the **E-mail Notification** section and configure the SMTP settings:
 
 <div align="center">
-  <img src="./images/gmail-setup/smtp_setup_gmail.png" alt="SMTP Gmail Configuration" width="800" />
+  <img src="../images/gmail-setup/smtp_setup_gmail.png" alt="SMTP Gmail Configuration" width="800" />
 </div>
 
 Use these settings:

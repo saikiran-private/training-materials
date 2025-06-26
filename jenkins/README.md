@@ -4,84 +4,71 @@
   <img src="./images/jenkins.jpg" alt="Jenkins Logo" width="400" />
 </div>
 
-## What is Jenkins?
+## 📚 Course Overview
 
-Jenkins is an **open-source automation server** that helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery (CI/CD).
+This comprehensive Jenkins training is organized into progressive modules, taking you from basics to advanced topics. Each section builds upon previous knowledge to ensure a smooth learning experience.
 
-### Key Features
-- **Continuous Integration/Continuous Delivery** - Automate your build, test, and deployment pipeline
-- **Extensible** - Over 1,800 plugins to support building, deploying, and automating any project
-- **Distributed** - Easily distribute work across multiple machines for faster builds
-- **Easy Configuration** - Web-based GUI and can be configured via code (Configuration as Code)
-- **Open Source** - Free to use with a large, active community
+## 🎯 Learning Path
 
-### Why Use Jenkins?
-1. **Automation** - Reduces manual effort and human errors
-2. **Fast Feedback** - Quickly know if your code changes broke something
-3. **Consistency** - Same build process every time
-4. **Integration** - Works with virtually any tool in your development stack
-5. **Visibility** - Clear view of your build/deployment pipeline status
+### 01 - Getting Started
+Foundation concepts for working with Jenkins
+- **[Understanding Job Types](./01-getting-started/01-job-types.md)** - Freestyle, Pipeline, Multibranch, and more
+- **[Job Configuration Guide](./01-getting-started/02-job-configuration.md)** - Complete configuration walkthrough
 
-## Training Topics
+### 02 - Build Automation
+Automate your build processes effectively
+- **[Build Triggers](./02-build-automation/01-build-triggers.md)** - Webhooks, polling, and scheduled builds
+- **[Cron Scheduling](./02-build-automation/02-cron-scheduling.md)** - Master Jenkins scheduling syntax with Hash
+- **[Background Processes](./02-build-automation/03-background-processes.md)** - Managing long-running tasks
 
-### 📚 Available Documentation
+### 03 - Setup and Configuration
+Infrastructure and integration setup
+- **[Jenkins Agents Setup](./03-setup-and-configuration/01-jenkins-agents.md)** - Distributed build architecture
+- **[Email Configuration](./03-setup-and-configuration/02-email-configuration.md)** - Gmail SMTP integration
 
-1. **[Job Types](./Job-Types.md)**
-   - Learn about different Jenkins job types (Freestyle, Pipeline, Multibranch, etc.)
-   - Understand when to use each job type
+### 04 - Security and Plugins
+Secure your Jenkins and extend functionality
+- **[Jenkins Credentials](./04-security-and-plugins/01-credentials.md)** - Secure credential management
+- **[Essential Plugins](./04-security-and-plugins/02-plugins.md)** - Must-have plugins guide
 
-2. **[Cron Load Spreading](./Cron-Load-Spread.md)**
-   - Understand Jenkins' special `H` (hash) syntax for cron scheduling
-   - Learn how to prevent the "thundering herd" problem
+## 🚀 Quick Start
 
-3. **[Background Processes](./Background-Process.md)**
-   - How to start processes that survive after Jenkins build completion
-   - Using `BUILD_ID=dontKillMe` for background processes
+1. **New to Jenkins?** Start with [Understanding Job Types](./01-getting-started/01-job-types.md)
+2. **Setting up automation?** Jump to [Build Triggers](./02-build-automation/01-build-triggers.md)
+3. **Scaling Jenkins?** Check [Jenkins Agents Setup](./03-setup-and-configuration/01-jenkins-agents.md)
+4. **Security concerns?** Review [Jenkins Credentials](./04-security-and-plugins/01-credentials.md)
 
-4. **[Gmail SMTP Configuration](./Gmail-SMTP-Config.md)**
-   - Step-by-step guide to configure Gmail SMTP in Jenkins
-   - Creating Google App Passwords for authentication
+## 🎓 Learning Objectives
 
-5. **[Build Triggers](./Build-Triggers.md)**
-   - Understanding different trigger types (Cron, Poll SCM, Webhooks)
-   - Setting up GitHub webhooks for instant builds
+By completing this training, you will be able to:
+- ✅ Create and configure various types of Jenkins jobs
+- ✅ Implement automated build triggers and schedules
+- ✅ Set up distributed builds with agents
+- ✅ Configure secure credential management
+- ✅ Extend Jenkins with plugins
+- ✅ Implement CI/CD best practices
 
-6. **[Job Configuration Guide](./Job-Configuration-Guide.md)**
-   - Complete walkthrough of all job configuration options
-   - Detailed explanation of General, SCM, Triggers, Environment, Build Steps, and Post-Build Actions
+## 🔧 Additional Resources
 
-## Getting Started with Jenkins
-
-### Installation
-Jenkins can be installed on various platforms:
-- **Docker**: `docker run -p 8080:8080 jenkins/jenkins:lts`
-- **WAR file**: Download and run with `java -jar jenkins.war`
-- **Native packages**: Available for Windows, macOS, and Linux
-
-### First Steps
-1. Access Jenkins at `http://<ip-address>:8080`
-2. Complete the initial setup wizard
-3. Install suggested plugins
-4. Create your first admin user
-5. Start creating jobs!
-
-### Basic Concepts
-- **Job/Project**: A task or set of tasks that Jenkins executes
-- **Build**: A single execution of a job
-- **Workspace**: Directory where Jenkins runs your builds
-- **Node/Agent**: A machine that can run Jenkins jobs
-- **Plugin**: Extensions that add functionality to Jenkins
-
-## Best Practices
-- Use Pipeline jobs for complex workflows
-- Store Jenkinsfiles in version control
-- Use folders to organize related jobs
-- Implement proper security and access controls
-- Regularly backup Jenkins configuration
-- Monitor Jenkins performance and disk usage
-
-## Additional Resources
 - [Official Jenkins Documentation](https://www.jenkins.io/doc/)
 - [Jenkins Pipeline Syntax](https://www.jenkins.io/doc/book/pipeline/syntax/)
-- [Jenkins Plugins](https://plugins.jenkins.io/)
+- [Jenkins Plugins Directory](https://plugins.jenkins.io/)
 - [Jenkins Community](https://www.jenkins.io/participate/)
+
+## 📝 Course Structure
+
+```
+Jenkins/
+├── 01-getting-started/        # Fundamentals
+├── 02-build-automation/       # Triggers & Scheduling  
+├── 03-setup-and-configuration/# Infrastructure
+├── 04-security-and-plugins/   # Security & Extensions
+└── images/                    # All screenshots and diagrams
+```
+
+## 🤝 Contributing
+
+Found an error or have suggestions? Feel free to contribute to improve these training materials!
+
+---
+*Happy Learning! 🚀*

@@ -3,7 +3,7 @@
 Build triggers determine when and how Jenkins jobs are executed. Understanding different trigger types helps you automate your CI/CD pipeline effectively.
 
 <div align="center">
-  <img src="./images/build_trigger.png" alt="Jenkins Build Triggers" width="800" />
+  <img src="../images/build_trigger.png" alt="Jenkins Build Triggers" width="800" />
 </div>
 
 ## Overview of Build Triggers

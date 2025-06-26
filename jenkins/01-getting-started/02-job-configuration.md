@@ -5,7 +5,7 @@ This guide provides a detailed explanation of all configuration options availabl
 ## 1. General Configuration
 
 <div align="center">
-  <img src="./images/job-config/general.png" alt="General Configuration" width="800" />
+  <img src="../images/job-config/general.png" alt="General Configuration" width="800" />
 </div>
 
 ### Project Name
@@ -55,7 +55,7 @@ This guide provides a detailed explanation of all configuration options availabl
 ## 2. Source Code Management (SCM)
 
 <div align="center">
-  <img src="./images/job-config/scm.png" alt="Source Code Management" width="800" />
+  <img src="../images/job-config/scm.png" alt="Source Code Management" width="800" />
 </div>
 
 ### None
@@ -74,7 +74,7 @@ This guide provides a detailed explanation of all configuration options availabl
 ## 3. Build Triggers
 
 <div align="center">
-  <img src="./images/job-config/triggers.png" alt="Build Triggers" width="800" />
+  <img src="../images/job-config/triggers.png" alt="Build Triggers" width="800" />
 </div>
 
 ### Available Triggers
@@ -89,7 +89,7 @@ This guide provides a detailed explanation of all configuration options availabl
 ## 4. Build Environment
 
 <div align="center">
-  <img src="./images/job-config/environment.png" alt="Build Environment" width="800" />
+  <img src="../images/job-config/environment.png" alt="Build Environment" width="800" />
 </div>
 
 ### Delete workspace before build starts
@@ -126,7 +126,7 @@ This guide provides a detailed explanation of all configuration options availabl
 ## 5. Build Steps
 
 <div align="center">
-  <img src="./images/job-config/build_step.png" alt="Build Steps" width="400" />
+  <img src="../images/job-config/build_step.png" alt="Build Steps" width="400" />
 </div>
 
 ### Execute Shell
@@ -180,7 +180,7 @@ This guide provides a detailed explanation of all configuration options availabl
 ## 6. Post-Build Actions
 
 <div align="center">
-  <img src="./images/job-config/post_build.png" alt="Post-Build Actions" width="400" />
+  <img src="../images/job-config/post_build.png" alt="Post-Build Actions" width="400" />
 </div>
 
 ### Archive the Artifacts
