@@ -9,7 +9,7 @@ Jenkins uses a master-agent architecture where:
 - **Agents**: Execute the actual build jobs
 
 <div align="center">
-  <img src="../images/jenkins-agents/architecture.png" alt="Jenkins Master-Agent Architecture" width="800" />
+  <img src="../images/jenkins-agents/arch.png" alt="Jenkins Master-Agent Architecture" width="800" />
 </div>
 
 ### Benefits of Using Agents
