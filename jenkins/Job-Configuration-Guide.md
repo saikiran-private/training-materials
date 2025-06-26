@@ -126,7 +126,7 @@ This guide provides a detailed explanation of all configuration options availabl
 ## 5. Build Steps
 
 <div align="center">
-  <img src="./images/job-config/build_step.png" alt="Build Steps" width="800" />
+  <img src="./images/job-config/build_step.png" alt="Build Steps" width="400" />
 </div>
 
 ### Execute Shell
@@ -180,7 +180,7 @@ This guide provides a detailed explanation of all configuration options availabl
 ## 6. Post-Build Actions
 
 <div align="center">
-  <img src="./images/job-config/post_build.png" alt="Post-Build Actions" width="800" />
+  <img src="./images/job-config/post_build.png" alt="Post-Build Actions" width="400" />
 </div>
 
 ### Archive the Artifacts
