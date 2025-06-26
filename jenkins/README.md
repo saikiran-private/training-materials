@@ -1,7 +1,7 @@
 # Jenkins Training Materials
 
 <div align="center">
-  <img src="./images/cicd.png" alt="CICD" width="400" />
+  <img src="./images/cicd.png" alt="CICD" width="600" />
 </div>
 
 ## 📚 Course Overview
