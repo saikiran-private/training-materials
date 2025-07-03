@@ -74,6 +74,11 @@ Jenkins/
 └── images/                    # All screenshots and diagrams
 ```
 
+## 📋 Hands-on Assignments
+
+Practice your Jenkins skills with real-world scenarios:
+- **[Jenkins Assignments](./Jenkins-Assignments.md)** - 6 progressive assignments from Freestyle jobs to Multibranch pipelines
+
 ## 🤝 Contributing
 
 Found an error or have suggestions? Feel free to contribute to improve these training materials!
