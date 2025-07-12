@@ -20,23 +20,24 @@ User data is a feature that allows you to:
 
 ```mermaid
 flowchart TD
-    A[Start: AWS Console Login] -----> B[Navigate to EC2 Dashboard]
+        A[Start: AWS Console Login] -----> B[Navigate to EC2 Dashboard]
     B -----> C[Click Launch Instance]
     C -----> D[Choose AMI]
     D -----> E[Choose Instance Type]
-    E -----> F[Configure Advanced Details - User Data]
-    F -----> G[Add User Data Like shown]
-    G -----> H[Create Key Pair]
+    E -----> H[Create Key Pair]
     H -----> I[Download Key Pair]
+
     I -----> J[Configure Security Group]
-    J -----> K[Review and Launch]
+    J -----> F[Configure Advanced Details - User Data]
+    F -----> G[Add User Data Like shown]
+    G -----> K[Review and Launch]
     K -----> L[Instance Running]
     L -----> M[Connect to Instance in your terminal using this command **ssh -i keypair.pem username@public_ip**]
     
     D@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/ami-selection.png", h: 430, w: 1270, pos: "t"}
     E@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/instance-type.png", h: 446, w: 1544, pos: "t"}
     F@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/advanced-detail.png", h: 332, w: 560, pos: "t"}
-    G@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/user-data.png", h: 1442, w: 1452, pos: "t"}
+    G@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/user-data.png", h: 2000, w: 1452, pos: "t"}
     H@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/create-keypair.png", h: 510, w: 1646, pos: "t"}
     I@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/download-keypair.png", h: 1198, w: 1240, pos: "t"}
     J@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/security-group.png", h: 892, w: 1490, pos: "t"}
@@ -93,11 +94,39 @@ flowchart TD
 
 ```bash
 #!/bin/bash
-yum update -y
-yum install -y httpd
-systemctl start httpd
-systemctl enable httpd
-echo "<h1>Hello from EC2 with User Data!</h1>" > /var/www/html/index.html
+
+# Download and install nvm:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+# in lieu of restarting the shell
+\. "$HOME/.nvm/nvm.sh"
+
+# Download and install Node.js:
+nvm install 24
+
+# Verify the Node.js version:
+node -v # Should print "v24.3.0".
+nvm current # Should print "v24.3.0".
+
+# Verify npm version:
+npm -v # Should print "11.4.2".
+
+#Maven Installation:
+sudo yum update -y && sudo yum upgrade -y
+sudo yum install java-21-openjdk wget -y
+java --version
+wget https://dlcdn.apache.org/maven/maven-3/3.9.10/binaries/apache-maven-3.9.10-bin.tar.gz
+sudo tar xzf apache-maven-3.9.10-bin.tar.gz -C /opt
+# Create and populate the maven.sh file in one step
+echo 'export MAVEN_HOME=/opt/apache-maven-3.9.10' | sudo tee /etc/profile.d/maven.sh
+echo 'export PATH=$MAVEN_HOME/bin:$PATH' | sudo tee -a /etc/profile.d/maven.sh
+sudo chmod +x /etc/profile.d/maven.sh
+source /etc/profile.d/maven.sh
+mvn -version
+
+
+#Install pip
+sudo apt-get install python3-pip -y
 ```
 
 ### 2. Ubuntu/Debian System Setup
