@@ -18,7 +18,7 @@ flowchart TD
     F -----> G[Download Key Pair]
     G -----> H[Configure Security Group]
     H -----> I[Review and Launch]
-    I -----> J[Instance Running]
+    I -----> J[Instance State]
     J -----> K[Connect to Instance in your terminal using this command **ssh -i keypair.pem username@public_ip**]
     
     D@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/ami-selection.png", h: 430, w: 1270, pos: "t"}
