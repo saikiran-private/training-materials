@@ -34,7 +34,7 @@ flowchart TD
     
     D@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/ami-selection.png", h: 430, w: 1270, pos: "t"}
     E@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/instance-type.png", h: 446, w: 1544, pos: "t"}
-    F@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/advanced-details.png", h: 600, w: 1500, pos: "t"}
+    F@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/AWS/EC2(Elastic-Compute-Cloud)/images/Advanced-details.png", h: 600, w: 1500, pos: "t"}
     G@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/create-keypair.png", h: 510, w: 1646, pos: "t"}
     H@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/download-keypair.png", h: 1198, w: 1240, pos: "t"}
     I@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/security-group.png", h: 892, w: 1490, pos: "t"}
