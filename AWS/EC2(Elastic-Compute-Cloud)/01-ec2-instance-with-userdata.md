@@ -90,7 +90,7 @@ flowchart TD
 
 ## Common User Data Examples
 
-### 1. Basic System Update and Apache Installation (Amazon Linux)
+### 1. Java, NPM, Maven Installation (Amazon Linux)
 
 ```bash
 #!/bin/bash
@@ -164,14 +164,6 @@ nvm install node
 npm install -g pm2
 ```
 
-### 5. Python Environment Setup
-
-```bash
-#!/bin/bash
-yum update -y
-yum install -y python3 python3-pip
-pip3 install flask gunicorn
-```
 
 ## User Data Best Practices
 
