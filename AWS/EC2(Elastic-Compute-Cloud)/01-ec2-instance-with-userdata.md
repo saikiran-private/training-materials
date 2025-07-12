@@ -25,33 +25,36 @@ flowchart TD
     C -----> D[Choose AMI]
     D -----> E[Choose Instance Type]
     E -----> F[Configure Advanced Details - User Data]
-    F -----> G[Create Key Pair]
-    G -----> H[Download Key Pair]
-    H -----> I[Configure Security Group]
-    I -----> J[Review and Launch]
-    J -----> K[Instance Running]
-    K -----> L[Connect to Instance in your terminal using this command **ssh -i keypair.pem username@public_ip**]
+    F -----> G[Add User Data Like shown]
+    G -----> H[Create Key Pair]
+    H -----> I[Download Key Pair]
+    I -----> J[Configure Security Group]
+    J -----> K[Review and Launch]
+    K -----> L[Instance Running]
+    L -----> M[Connect to Instance in your terminal using this command **ssh -i keypair.pem username@public_ip**]
     
     D@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/ami-selection.png", h: 430, w: 1270, pos: "t"}
     E@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/instance-type.png", h: 446, w: 1544, pos: "t"}
-    F@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/AWS/EC2(Elastic-Compute-Cloud)/images/advanced-detail.png", h: 600, w: 1500, pos: "t"}
-    G@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/create-keypair.png", h: 510, w: 1646, pos: "t"}
-    H@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/download-keypair.png", h: 1198, w: 1240, pos: "t"}
-    I@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/security-group.png", h: 892, w: 1490, pos: "t"}
-    K@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/running-instance.png", h: 602, w: 2748, pos: "t"}
+    F@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/advanced-detail.png", h: 600, w: 1500, pos: "t"}
+    G@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/user-data.png", h: 600, w: 1500, pos: "t"}
+    H@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/create-keypair.png", h: 510, w: 1646, pos: "t"}
+    I@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/download-keypair.png", h: 1198, w: 1240, pos: "t"}
+    J@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/security-group.png", h: 892, w: 1490, pos: "t"}
+    L@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/running-instance.png", h: 602, w: 2748, pos: "t"}
     
     style A fill:#e1f5fe,font-size:30px
     style D fill:#c8e6c9,font-size:30px
     style E fill:#c8e6c9,font-size:30px
     style F fill:#fff3e0,font-size:30px
-    style G fill:#c8e6c9,font-size:30px
+    style G fill:#fff3e0,font-size:30px
     style H fill:#c8e6c9,font-size:30px
     style I fill:#c8e6c9,font-size:30px
-    style K fill:#c8e6c9,font-size:30px
+    style J fill:#c8e6c9,font-size:30px
+    style L fill:#c8e6c9,font-size:30px
     style B font-size:30px
     style C font-size:30px
-    style J font-size:30px
-    style L font-size:30px
+    style K font-size:30px
+    style M font-size:30px
     
     %% Arrow styling - thick arrows
     linkStyle default stroke-width:10px
@@ -66,6 +69,7 @@ flowchart TD
     linkStyle 8 stroke-width:10px
     linkStyle 9 stroke-width:10px
     linkStyle 10 stroke-width:10px
+    linkStyle 11 stroke-width:10px
 ```
 
 ## Process Flow
