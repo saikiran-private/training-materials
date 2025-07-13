@@ -78,19 +78,20 @@ flowchart TD
 1. **AWS Console Login** - Access your AWS account
 2. **Navigate to EC2** - Go to EC2 Dashboard  
 3. **Launch Instance** - Click "Launch Instance"
-4. **Select AMI** - Choose your operating system 🔑
-5. **Choose Instance Type** - Select instance size 🔑
-6. **Configure Instance** - Navigate to advanced details 🔑 ✅
-7. **Add User Data** - Write your automation script 🔑 ✅
-8. **Create/Select Key Pair** - Set up SSH access 🔑
-9. **Configure Security Group** - Set up security rules 🔑
-10. **Review and Launch** - Final review and launch 📝
-11. **Verify Execution** - Check user data script results 🔑 ✅
-12. **Connect and Test** - SSH and verify installations 📝
+4. **Choose AMI** - Choose your operating system 🔑 ✅
+5. **Choose Instance Type** - Select instance size 🔑 ✅
+6. **Create Key Pair** - Create SSH key pair 🔑 ✅
+7. **Download Key Pair** - Save key file securely 🔑 ✅
+8. **Configure Security Group** - Set up security rules 🔑 ✅
+9. **Configure Advanced Details** - Navigate to advanced details 🔑 ✅
+10. **Add User Data** - Write your automation script 🔑 ✅
+11. **Review and Launch** - Final review and launch 📝
+12. **Instance Running** - Verify instance is running 🔑 ✅
+13. **Connect and Test** - SSH and verify user data execution 📝
 
 ## Common User Data Examples
 
-### 1. Java, NPM, Maven Installation (Amazon Linux)
+### 1. Java, NPM, Maven Installation (RHEL/Amazon Linux)
 
 ```bash
 #!/bin/bash
@@ -126,7 +127,7 @@ mvn -version
 
 
 #Install pip
-sudo apt-get install python3-pip -y
+sudo yum install python3-pip -y
 ```
 
 ### 2. Ubuntu/Debian System Setup
