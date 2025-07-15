@@ -34,12 +34,12 @@ flowchart TD
     L -----> M[Launch Instance]
     M -----> N[Instance Running with Pre-configured Setup]
     
-    D@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/ami-selection.png", h: 430, w: 1270, pos: "t"}
-    E@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/instance-type.png", h: 446, w: 1544, pos: "t"}
-    H@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/stop-instance.png", h: 400, w: 1200, pos: "t"}
-    I@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/create-ami.png", h: 600, w: 1400, pos: "t"}
-    K@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/custom-ami-selection.png", h: 500, w: 1300, pos: "t"}
-    N@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/EC2(Elastic-Compute-Cloud)/images/running-instance.png", h: 602, w: 2748, pos: "t"}
+    D@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/02-ec2(elastic-compute-cloud)/images/ami-selection.png", h: 430, w: 1270, pos: "t"}
+    E@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/02-ec2(elastic-compute-cloud)/images/instance-type.png", h: 446, w: 1544, pos: "t"}
+    H@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/02-ec2(elastic-compute-cloud)/images/stop-instance.png", h: 400, w: 1200, pos: "t"}
+    I@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/02-ec2(elastic-compute-cloud)/images/create-ami.png", h: 600, w: 1400, pos: "t"}
+    K@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/02-ec2(elastic-compute-cloud)/images/custom-ami-selection.png", h: 500, w: 1300, pos: "t"}
+    N@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/02-ec2(elastic-compute-cloud)/images/running-instance.png", h: 602, w: 2748, pos: "t"}
     
     style A fill:#e1f5fe,font-size:30px
     style D fill:#c8e6c9,font-size:30px
@@ -136,27 +136,8 @@ echo "Development environment ready!" > /home/ec2-user/README.txt
 echo "Git, Node.js, and Python3 are installed." >> /home/ec2-user/README.txt
 ```
 
-### 3. Database Server AMI
 
-**Simple MySQL Setup:**
-```bash
-#!/bin/bash
-# Update system
-yum update -y
-
-# Install MySQL server
-yum install -y mysql-server
-
-# Start MySQL service
-systemctl start mysqld
-systemctl enable mysqld
-
-# Create a simple database (optional)
-# Note: You would set up the database after first boot
-echo "MySQL server installed and started" > /home/ec2-user/db-status.txt
-```
-
-### 4. Docker Host AMI
+### 3. Docker Host AMI
 
 **Simple Docker Installation:**
 ```bash
@@ -176,27 +157,6 @@ usermod -a -G docker ec2-user
 
 # Verify installation
 echo "Docker installed successfully" > /home/ec2-user/docker-status.txt
-```
-
-### 5. Monitoring Tools AMI
-
-**Basic Monitoring Setup:**
-```bash
-#!/bin/bash
-# Update system
-yum update -y
-
-# Install system monitoring tools
-yum install -y htop
-yum install -y wget curl
-
-# Install CloudWatch agent (basic)
-wget https://s3.amazonaws.com/amazoncloudwatch-agent/amazon_linux/amd64/latest/amazon-cloudwatch-agent.rpm
-rpm -U ./amazon-cloudwatch-agent.rpm
-
-# Create status file
-echo "Basic monitoring tools installed" > /home/ec2-user/monitoring-status.txt
-echo "htop, wget, curl, and CloudWatch agent are ready" >> /home/ec2-user/monitoring-status.txt
 ```
 
 ## AMI Best Practices
