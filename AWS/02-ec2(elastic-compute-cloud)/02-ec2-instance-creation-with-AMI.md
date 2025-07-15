@@ -42,8 +42,10 @@ flowchart TD
     I -----> J[Base Instance Running]
     J -----> K[Connect and Install Software]
     K -----> L[Stop Instance for AMI Creation]
-    L -----> M[Create Custom AMI]
-    M -----> N[Launch New Instance from Custom AMI]
+    L -----> M[Navigate to Images and Templates]
+    M -----> N[Create Custom AMI]
+    N -----> O[Check AMI Status/State]
+    O -----> P[Launch New Instance from Custom AMI]
     
     D@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/master/AWS/02-ec2(elastic-compute-cloud)/images/ami-selection.png", h: 430, w: 1270, pos: "t"}
     E@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/master/AWS/02-ec2(elastic-compute-cloud)/images/instance-type.png", h: 446, w: 1544, pos: "t"}
@@ -51,6 +53,11 @@ flowchart TD
     G@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/master/AWS/02-ec2(elastic-compute-cloud)/images/download-keypair.png", h: 1198, w: 1240, pos: "t"}
     H@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/master/AWS/02-ec2(elastic-compute-cloud)/images/security-group.png", h: 892, w: 1490, pos: "t"}
     J@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/master/AWS/02-ec2(elastic-compute-cloud)/images/running-instance.png", h: 602, w: 2748, pos: "t"}
+    L@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/master/AWS/02-ec2(elastic-compute-cloud)/images/AMI-Pre-selection.png", h: 698, w: 2494, pos: "t"}
+    M@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/master/AWS/02-ec2(elastic-compute-cloud)/images/AMI-Wizard.png", h: 828, w: 2140, pos: "t"}
+    N@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/master/AWS/02-ec2(elastic-compute-cloud)/images/Create-AMI.png", h: 1212, w: 2070, pos: "t"}
+    O@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/master/AWS/02-ec2(elastic-compute-cloud)/images/AMI-State.png", h: 1136, w: 2612, pos: "t"}
+    P@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/master/AWS/02-ec2(elastic-compute-cloud)/images/Launch-instance-using-ami.png", h: 964, w: 1784, pos: "t"}
     
     style A fill:#e1f5fe,font-size:30px
     style D fill:#c8e6c9,font-size:30px
@@ -63,6 +70,8 @@ flowchart TD
     style L fill:#fff3e0,font-size:30px
     style M fill:#fff3e0,font-size:30px
     style N fill:#fff3e0,font-size:30px
+    style O fill:#fff3e0,font-size:30px
+    style P fill:#fff3e0,font-size:30px
     style B font-size:30px
     style C font-size:30px
     style I font-size:30px
@@ -82,6 +91,8 @@ flowchart TD
     linkStyle 10 stroke-width:10px
     linkStyle 11 stroke-width:10px
     linkStyle 12 stroke-width:10px
+    linkStyle 13 stroke-width:10px
+    linkStyle 14 stroke-width:10px
 ```
 
 ## Process Flow
