@@ -2,59 +2,70 @@
 
 This guide covers creating custom Amazon Machine Images (AMI) and using them to launch new EC2 instances with pre-configured software and settings.
 
-## Overview
+# What is an AMI and Why Do We Need It?
+Think of an AMI (Amazon Machine Image) as a template or blueprint for creating EC2 instances. Just like you use a cookie cutter to make identical cookies, you use an AMI to create identical servers.
 
-A custom AMI allows you to create a template of your configured EC2 instance, including the operating system, applications, configurations, and data. This enables rapid deployment of identical instances and ensures consistency across your infrastructure.
+Real-world analogy: Imagine you're opening multiple coffee shops. Instead of setting up each shop from scratch (installing equipment, training staff, setting up POS systems), you create a "master template" with everything pre-configured. AMI works the same way for servers.
 
-## What is an AMI?
+# Why we need AMIs:
 
-An Amazon Machine Image (AMI) provides the information required to launch an instance:
-- Operating system and software packages
-- Application server and applications
-- Configuration files and settings
-- Data and file systems
-- Launch permissions and storage settings
-- Architecture (32-bit or 64-bit)
+Consistency: All instances launched from the same AMI are identical
+Speed: Launch instances in minutes instead of hours of manual setup
+Scalability: Quickly spin up multiple identical servers
+Disaster recovery: Recreate your exact server configuration instantly
 
-## Custom AMI Creation and Usage Flow
+
+# How AMI Relates to EC2 Instances
+The relationship is simpl   e:
+
+AMI = The recipe/template
+EC2 Instance = The actual running server created from that recipe
+AMI (Template) → Launch → EC2 Instance (Running Server)
+Practical example:
+
+You have a web server with Apache, PHP, and your application installed
+You create an AMI from this configured server
+Now you can launch 10 identical web servers instantly using this AMI
+
+## Phase 1: Create Base Instance (Same as Basic EC2 Creation)
 
 ```mermaid
 flowchart TD
     A[Start: AWS Console Login] -----> B[Navigate to EC2 Dashboard]
-    B -----> C[Launch Base Instance]
+    B -----> C[Click Launch Instance]
     C -----> D[Choose Base AMI]
-    D -----> E[Configure Instance]
-    E -----> F[Connect to Instance]
-    F -----> G[Install Software & Configure]
-    G -----> H[Stop Instance]
-    H -----> I[Create AMI from Instance]
-    I -----> J[Launch New Instance from Custom AMI]
-    J -----> K[Select Custom AMI]
-    K -----> L[Configure New Instance]
-    L -----> M[Launch Instance]
-    M -----> N[Instance Running with Pre-configured Setup]
+    D -----> E[Choose Instance Type]
+    E -----> F[Create Key Pair]
+    F -----> G[Download Key Pair]
+    G -----> H[Configure Security Group]
+    H -----> I[Review and Launch]
+    I -----> J[Base Instance Running]
+    J -----> K[Connect and Install Software]
+    K -----> L[Stop Instance for AMI Creation]
+    L -----> M[Create Custom AMI]
+    M -----> N[Launch New Instance from Custom AMI]
     
-    D@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/02-ec2(elastic-compute-cloud)/images/ami-selection.png", h: 430, w: 1270, pos: "t"}
-    E@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/02-ec2(elastic-compute-cloud)/images/instance-type.png", h: 446, w: 1544, pos: "t"}
-    H@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/02-ec2(elastic-compute-cloud)/images/stop-instance.png", h: 400, w: 1200, pos: "t"}
-    I@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/02-ec2(elastic-compute-cloud)/images/create-ami.png", h: 600, w: 1400, pos: "t"}
-    K@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/02-ec2(elastic-compute-cloud)/images/custom-ami-selection.png", h: 500, w: 1300, pos: "t"}
-    N@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/aws/AWS/02-ec2(elastic-compute-cloud)/images/running-instance.png", h: 602, w: 2748, pos: "t"}
+    D@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/master/AWS/02-ec2(elastic-compute-cloud)/images/ami-selection.png", h: 430, w: 1270, pos: "t"}
+    E@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/master/AWS/02-ec2(elastic-compute-cloud)/images/instance-type.png", h: 446, w: 1544, pos: "t"}
+    F@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/master/AWS/02-ec2(elastic-compute-cloud)/images/create-keypair.png", h: 510, w: 1646, pos: "t"}
+    G@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/master/AWS/02-ec2(elastic-compute-cloud)/images/download-keypair.png", h: 1198, w: 1240, pos: "t"}
+    H@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/master/AWS/02-ec2(elastic-compute-cloud)/images/security-group.png", h: 892, w: 1490, pos: "t"}
+    J@{ img: "https://raw.githubusercontent.com/artisantek/training-materials/master/AWS/02-ec2(elastic-compute-cloud)/images/running-instance.png", h: 602, w: 2748, pos: "t"}
     
     style A fill:#e1f5fe,font-size:30px
     style D fill:#c8e6c9,font-size:30px
     style E fill:#c8e6c9,font-size:30px
-    style G fill:#fff3e0,font-size:30px
-    style H fill:#fff3e0,font-size:30px
-    style I fill:#fff3e0,font-size:30px
-    style K fill:#c8e6c9,font-size:30px
-    style L fill:#c8e6c9,font-size:30px
-    style N fill:#c8e6c9,font-size:30px
+    style F fill:#c8e6c9,font-size:30px
+    style G fill:#c8e6c9,font-size:30px
+    style H fill:#c8e6c9,font-size:30px
+    style J fill:#c8e6c9,font-size:30px
+    style K fill:#fff3e0,font-size:30px
+    style L fill:#fff3e0,font-size:30px
+    style M fill:#fff3e0,font-size:30px
+    style N fill:#fff3e0,font-size:30px
     style B font-size:30px
     style C font-size:30px
-    style F font-size:30px
-    style J font-size:30px
-    style M font-size:30px
+    style I font-size:30px
     
     %% Arrow styling - thick arrows
     linkStyle default stroke-width:10px
